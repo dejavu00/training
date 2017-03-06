@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device=device-width,initial-scale=1">
+    <title>switcher弹性盒布局</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <div id="logo">
+        <a href="javascript:void(0)"><img src="../../../../public/images/logo.jpg" alt="logo图片" /></a>
+        <div class="other">other <i></i>
+            <ul class="subUl">
+                <li class="subLi"><a href="#">NEW <span >HTML</span></a></li>
+                <li class="subLi"><a href="#">Wiretree<span >WordPress</span></a></li>
+                <li class="subLi"><a href="#">Kyte<span >WordPress</span></a></li>
+                <li class="subLi"><a href="#">Seabird<span >WordPress</span></a></li>
+                <li class="subLi"><a href="#">ShadowBox-WP<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">ShadowBox-HTML<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">Rubio<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">Anchor<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">MyFolio<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">NEW<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">NEW<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">NEW<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">NEW<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">NEW<span >HTML</span></a></li>
+                <li class="subLi"><a href="#">NEW<span >HTML</span></a></li>
+            </ul>
+
+        </div>
+        <ul id="devices">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="purchase">
+        <a href="#" id="buy"><i></i>purchase</a>
+        <a href="#" id="close"><i></i>close</a>
+    </div>
+
+</header>
+<section>
+    <nav><div class="logo2"><img src="../../../../public/images/logo.png" alt="logo2"></div>
+    <ul class="navUl">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">TEAM</a></li>
+        <li><a href="#">FEATURES</a></li>
+        <li style="border-bottom-width:0 "><a href="#">CONTACT</a></li>
+    </ul>
+        <ul class="introduce">
+            <li><span></span><a href="#">ALL</a></li>
+            <li><span></span><a href="#">WEB DESIGN</a></li>
+            <li><span></span><a href="#">DEVELOPMENT</a></li>
+            <li><span></span><a href="#">PHOTOGRAPHY</a></li>
+            <li><span></span><a href="#">ILLUSTRATION</a></li>
+        </ul>
+        <div class="text">
+            <h1>CUSTOM TEXT</h1>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+              <br/>
+            <br/>
+            <p>Designed & Developed with love by <br/>
+                <a href="#">TommusRhodus</a>
+            </p>
+
+        </div>
+        <div class="icons">
+            <h1>SOCIAL ICONS</h1>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+
+        </div>
+    </nav>
+    <article>
+        <div class="row">
+        <div class="column column1"></div>
+        <div class="column column2"></div>
+        <div class="column column3"></div>
+        </div>
+        <div class="row">
+        <div class="column column4"></div>
+        <div class="column column5"></div>
+        <div class="column column6"></div>
+        </div>
+            <div class="row">
+        <div class="column column7"></div>
+        <div class="column column8"></div>
+        <div class="column column9"></div>
+            </div>
+        <div class="row">
+        <div class="column column10"></div>
+        <div class="column column11"></div>
+        <div class="column column12"></div>
+        </div>
+        <div class="row">
+        <div class="column column13"></div>
+        <div class="column column14"></div>
+        <div class="column column15"></div>
+        </div>
+        <div class="row">
+        <div class="column column16"></div>
+        <div class="column column17"></div>
+        <div class="column column18"></div>
+        </div>
+        <div class="row">
+        <div class="column column19"></div>
+        <div class="column column20"></div>
+        </div>
+
+    </article>
+</section>
+<script type="text/javascript">
+    (function () {
+        var other=document.querySelector(".other"),
+                subUl=document.querySelector(".subUl");
+        var odd=true;
+        other.onclick=function () {
+            if(odd){
+                subUl.style.display="block";
+                odd=false;
+            }else{
+                subUl.style.display="none";
+                odd=true;
+            }
+        }
+    })()
+
+</script>
+</body>
+</html>
