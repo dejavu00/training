@@ -291,12 +291,14 @@ footer{
     font-weight: bold;
 }
 .footerMain{
-    padding-top: 2em;
+    padding: 2em 0;
 }
 .footerMain .box{
     padding-right: 2em;
 }
-
+.footerMain .box h1{
+    margin-bottom: 2em;
+}
 .footerMain .box  a{
     color: #09c;
     font-size: 0.8em;
@@ -327,6 +329,7 @@ footer{
     padding-right: 2em;
 }
 .footMain{
+    padding-top: 1em;line-height: 1em;
     justify-content: flex-start;
 }
 @media all and (max-width: 960px){
@@ -371,7 +374,7 @@ footer{
         justify-content: flex-start;
     }
     .erWeiMa img{
-        width: 8em;height: auto;
+        width: 7em;height: auto;
     }
     .news-pic img{
         height:auto;
