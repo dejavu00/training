@@ -1,11 +1,12 @@
 *{
-    margin: 0 auto;padding: 0;
+    margin: 0 ;padding: 0;
 }
 body{
     font-size: 62.5%;
     font-family: "Microsoft YaHei","宋体", 'Myriad Pro','Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 a{
+    color: #5e5e5e;
     text-decoration: none;
 }
 a img{
@@ -14,18 +15,391 @@ a img{
 img{
     width: 100%;height: 100%;
 }
+.clear{
+    width: 100%;height: 20px;
+    clear: both;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
 li{
     list-style: none;
 }
-
+i{
+    width: 1em;height: 1em;display: inline-block;
+}
 header{
     background-color: #f8f8f8;
+    border-bottom: 1px solid gainsboro;
 }
-nav{
-    width: 1024px;
-   height: 20px;background: red;
+nav,.banner,.broadcast,.content,.footerMain,.footMain{
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: flex;
+    width: 960px;
+    justify-content: space-between;
+    font-size: 1.4em;
+
 }
 .navUl{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
 
+}
+.navUl li{
+    padding: 0.3em 0.6em ;
+    border-right: 1px solid gainsboro;
+}
+.dropDown{
+    position: relative;
+}
+.navUl li:hover,.person a:hover{
+    background-color: #ddd;
 
+}
+.dropDown:hover .subUl{
+    display: block;
+}
+.subUl{
+    width: 250%;
+    top: 2em;
+    left:-0.1em;
+    background-color: #ddd;
+    position: absolute;
+    display: none;
+    padding: 1em;
+}
+.subUl li {
+    border-bottom: 1px solid gray;
+    line-height: 1.5em;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+.subUl li.li-last{
+    border-bottom: 0;
+}
+.subUl li:hover{
+    padding-left: 2em;
+}
+.person{
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    padding-right: 1.3em;
+}
+.person a{
+    display: inline-block;
+    padding: 0 0.6em;
+   height: 100%;
+    line-height: 2em;
+}
+#subNav{
+    position: relative;
+}
+.dropDown-nav{
+    display: none!important;
+}
+.dropDown-nav + ul.subUl{
+    width: 10em;
+}
+#subNav:hover >ul.subUl{
+    display: block;
+}
+#subNav:hover:hover .dropDown-nav{
+    background-color: #ddd;
+}
+.logo,.banner{
+    padding: 0.8em 0;
+}
+.logo img,.bannerA img{
+    width: auto;;height: auto;
+}
+.bannerA{
+    padding: 0.5em 0 1em 4em;
+}
+.broadcast{
+    background-color: #f8f8f8;
+    padding: 1em 0;
+    color: #5e5e5e;
+}
+
+section{
+    width: 64%;
+}
+
+article{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+article .item{
+    width:48%;
+
+}
+article h1,.footerMain h1{
+    color: #09c;
+    font-size: 0.8em;
+    border-bottom: 1px solid gainsboro;
+    padding: 0.5em 0;
+}
+
+article h1:first-of-type{
+    flex-basis: 100%;margin-bottom: 10px;
+}
+article h2 a{
+    font-size: 0.4em;
+    color: #000;
+}
+.news-pic{
+    display: block;
+    height: 10em;
+    overflow: hidden;
+
+    border: 0.3em solid gainsboro;
+}
+.news-pic img{
+    height: auto;
+}
+.news-message p,.news-content p{
+    margin:  0.5em  0;
+    color: #333;
+}
+a.for-all{
+    color: #0099cc;
+}
+.detail-pic{
+    padding: 0.3em;border: 1px solid gainsboro;
+    width: 5em;height: 5em;
+}
+.detail-pic2{
+    width: 3em;height: 3em;
+}
+.detail-title{
+    color: black;
+    font-weight: bold;
+}
+.detail-message{
+    width: 60%;
+    padding-left: 0.5em;
+}
+.item ul li {
+    overflow: auto;
+    margin-top: 1em;
+}
+.pic{
+    margin-top: 1em;
+}
+span.update,span.type{
+    font-size: 0.5em;color: #999;
+}
+/*aside*/
+aside{
+    width: 31%;
+
+}
+
+.community{
+    padding: 1.3em;
+    border: 1px solid gainsboro;
+    line-height: 2.5em;
+}
+.community-top{
+    border-bottom:1px solid gainsboro ;
+}
+.community-top p{
+    color: #000;
+    font-weight: bold;
+}
+.community-top span{
+    color: #999;
+}
+.community-bottom a{
+    color: #0099cc;
+}
+.third-party a{
+    display: inline-block;
+    width: 1.6em;
+}
+.aside-banner{
+
+    width: 100%;
+    margin: 2em 0;
+
+}
+aside article .item{
+    width: 100%;
+}
+aside article .item .detail-pic{
+    width:3.5em;height: 3.5em ;
+}
+.aside-banner img{
+    width: auto;height: auto;
+}
+
+.tab a{
+    border: 1px solid #fff;
+   border-bottom: 1px solid gainsboro;
+    font-weight: bold;
+    color: #000;
+    box-sizing: border-box;
+    padding: 1em 1em 0 1em;
+}
+.tab a.active{
+    border: 1px solid gainsboro;
+    border-bottom-color: #fff;
+    color: #09c;
+}
+.tab a:hover{
+    color: #09c;
+}
+.tab-content{
+    padding: 0.7em;
+    border: 1px solid gainsboro;
+}
+.tab-content span{
+    color: #22bcdd;
+    padding: 0 0.5em;
+    font-size: 1.3em;font-weight: bold;
+}
+.tab-content a{
+    font-size: 0.9em;
+    line-height: 2em;
+}
+.tab-content a:hover{
+    color: #09c;
+}
+i.star{
+    color: #c5c5c5;
+    font-size: 0.6em;
+    font-style: normal;
+    width: auto;height: auto;
+    display: inline;
+}
+footer{
+    border: 1px solid gainsboro;
+    background-color: #f8f8f8;
+}
+
+.quick-link{
+    color: black;
+    font-weight: bold;
+}
+.footerMain{
+    padding-top: 2em;
+}
+.footerMain .box{
+    padding-right: 2em;
+}
+
+.footerMain .box  a{
+    color: #09c;
+    font-size: 0.8em;
+}
+.erWeiMa{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.erWeiMa p{
+    flex-basis: 100%;
+}
+.erWeiMa img{
+    width: 30%;
+    height: auto;
+}
+.foot{
+
+    border: 1px solid gainsboro;
+    background-color: #fff;
+    height: 3em;
+}
+.foot a,.foot span{
+    color: #999;
+    padding-right: 1em;
+}
+.foot span{
+    padding-right: 2em;
+}
+.footMain{
+    justify-content: flex-start;
+}
+@media all and (max-width: 960px){
+    nav,.banner,.broadcast,.content,.footerMain,.footMain{
+        width: 720px;
+    }
+    .bannerA{
+        display: none;
+    }
+    .news-pic img{
+        height: 100%;
+    }
+    .community{
+        padding: 0.6em;
+    }
+    .aside-banner img{
+        width: 100%;
+    }
+}
+@media all and (max-width: 730px){
+    .logo{
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav,.banner,.broadcast,.content,.footerMain,.footMain{
+        width:95%;
+    }
+    .content,.footerMain{
+        flex-wrap: wrap;
+    }
+    section,article,article .item,aside{
+        width: 100%;
+    }
+    .footerMain{
+        flex-direction: column;
+    }
+    .footerMain .box{
+        margin-bottom: 2em;
+    }
+    .erWeiMa{
+        justify-content: flex-start;
+    }
+    .erWeiMa img{
+        width: 8em;height: auto;
+    }
+    .news-pic img{
+        height:auto;
+    }
+    .tab a{
+        display: block;
+        width: 100%;
+        border: 1px solid gainsboro;
+        border-bottom: 0;
+        padding: 1.7em;
+    }
+    .aside-banner img{
+        width: 18em;height: 10em;
+    }
+    .navUl{
+        display: none;
+    }
+    nav{
+        justify-content: flex-end;
+    }
+    .dropDown-nav{
+        display: block!important;
+    }
+    .foot a{
+        padding-right: 0.6em;
+    }
+    .foot span{
+        padding-right: 2em;
+    }
 }
