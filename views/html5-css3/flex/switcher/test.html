@@ -8,35 +8,64 @@
         *{
             margin: 0;padding: 0;
         }
+        body{
+            height: 1000px;
+        }
     </style>
 </head>
 <body>
 
 <div id="oDiv" style="width: 300px;height: 300px;background-color: greenyellow;position: relative"></div>
 <script type="text/javascript">
-   var oDiv=document.getElementById("oDiv");
-    oDiv.onmousedown=function (e) {
+//    (function () {
+//        var oDiv=document.getElementById("oDiv");
+//        oDiv.onmousedown=function (e) {
+//
+//            var ev = e || window.event;
+//
+//            var disX = ev.clientX - oDiv.offsetLeft;
+//            var disY = ev.clientY - oDiv.offsetTop;
+//
+//
+//            oDiv.onmousemove=function (e) {
+//
+//                var ev=e || window.event;
+//                console.log(ev.clientX+"|"+ev.clientY);
+//                console.log(disX+"|"+disY);
+//                oDiv.style.left=ev.clientX-disX+'px';
+//                oDiv.style.top=ev.clientY-disY+'px';
+//
+//            }
+//            document.onmouseup=function (e) {
+//                oDiv.onmousemove=null;
+//                document.onmouseup=null;
+//            }
+//        }
+//    })();
+//    (function () {
+//        var oDiv=document.getElementById("oDiv");
+//        var array=[];
+//        oDiv.addEventListener('click',function (e) {
+//            var ev=e ||window.event;
+//
+//            if(ev.ctrlKey){
+//                array.push('ctrl')
+//                alert(array)
+//            }
+//        });
+//
+//    })();
 
-            var ev = e || window.event;
-
-            var disX = ev.pageX - oDiv.offsetLeft;
-            var disY = ev.pageY - oDiv.offsetTop;
-
-
-        oDiv.onmousemove=function (e) {
-
+        alert(1)
+        var oDiv=document.getElementById("oDiv");
+        oDiv.addEventListener('mousewheel',function (e) {
             var ev=e || window.event;
-            console.log(ev.pageX+"|"+ev.pageY);
-            console.log(disX+"|"+disY);
-            oDiv.style.left=ev.pageX-disX+'px';
-            oDiv.style.top=ev.pageY-disY+'px';
 
-        }
-        document.onmouseup=function (e) {
-            oDiv.onmousemove=null;
-            document.onmouseup=null;
-        }
-    }
+            console.log(ev.wheelDelta)
+        })
+
+
+
 </script>
 </body>
 </html>
