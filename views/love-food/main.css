@@ -32,7 +32,9 @@ i{
     vertical-align: middle;
     background:url("/training/public/images/love-food/sprites.png") no-repeat;
 }
-
+.text-center{
+    text-align: center;
+}
 header{
     height: 5em;
     background: #F5595B;
@@ -52,7 +54,6 @@ header{
     border-right:2px solid #fff ;
 }
 .header-mid{
-    text-align: center;
     width: 70%;
     line-height: 6em;
 }
@@ -71,8 +72,6 @@ header{
 i.search{
     width:2em;height: 3em;
     background-position:-6px -72px  ;
-
-
 }
 i.car{
     padding-bottom: 1em;
@@ -83,9 +82,7 @@ i.car{
 nav{
     position: relative;
     height: 94em;
-    /*background:url("/training/public/images/love-food/big-bg.png") no-repeat;*/
 }
-
 nav img{
     z-index: -22;
     position: absolute;
@@ -106,13 +103,9 @@ nav img{
     width: 16%;border-right: 1px solid #FFFFFF;
 }
 #navUl li.active,#navUl li:hover{
-
     background: #1F3F55;
 }
-#navUl li.active a{
-    color: #fff;
-}
-#navUl li:hover a{
+#navUl li.active a,#navUl li:hover a{
     color: #fff;
 }
 .navLi:last-of-type{
@@ -120,7 +113,6 @@ nav img{
 }
 .collect{
     margin-top: 7em;
-    text-align: center;
 }
 .collect i{
     display: block;
@@ -138,7 +130,6 @@ nav img{
 }
 .collect a{
     display: inline-block;
-
     background: #F5595B;
     padding: 1.3em 5.4em;
 }
@@ -175,7 +166,6 @@ nav img{
 }
 h1{
     width: 194px;
-    text-align: center;
     color: #F5595B;
     font-size: 2.4em;
     padding-bottom: 1.3em;
@@ -186,7 +176,6 @@ section p{
     padding: 2em 7em;
     color: #000000;
    width: 855px;
-
 }
 .picS li{
     background: #1F3F55;
@@ -215,21 +204,17 @@ section p{
     font-size: 3em;
     padding-right:2em;
     line-height: 0.5em;
-
 }
 .picS li a{
     font-size: 0.4em;
     text-decoration: line-through;
 }
 .banner{
-
     width: 100%;
     background: #69737B;
     height: 600px;
-
 }
 .bannerMid{
-
     padding-top:100px;
 }
 .banner-pic{
@@ -266,7 +251,6 @@ section p{
 .food-title{
     color: #fff;
     font-size: 2em;
-    text-align: center;
     height: 2.8em;
     line-height: 2.8em;
     background: #1F3F55;
@@ -275,7 +259,6 @@ section p{
     margin-top: 4em;
 }
 .foodLi p{
-
     width: 100%;padding: 1em 0;
 }
 .foodLi a{
@@ -284,7 +267,6 @@ section p{
 }
 footer{
     background: #69737B;
-
 }
 .foot{
     height: 33em;
@@ -306,7 +288,6 @@ footer{
 }
 .bottom{
     color: #FFFFFF;
-    text-align: center;
     height: 6em;
     background: #F55965;
     line-height: 6em;
