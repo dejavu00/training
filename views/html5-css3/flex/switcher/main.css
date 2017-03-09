@@ -68,13 +68,13 @@ width: 3em;height: 3em;
     background-position: -19px;
 }
 #devices li:nth-child(3){
-    background-position: -36px;
+    background-position: -39px;
 }
 #devices li:nth-child(4){
-    background-position: -53px;
+    background-position: -84px;
 }
 #devices li:nth-child(5){
-    background-position: -73px;
+    background-position: -63px;
 }
 
 #purchase{
