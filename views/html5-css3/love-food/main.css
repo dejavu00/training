@@ -209,6 +209,7 @@ section p{
     text-decoration: line-through;
 }
 .banner{
+    margin-top: 6.4em;
     width: 100%;
     background: #69737B;
     height: 600px;

@@ -1,0 +1,38 @@
+body{
+  font-size: 62.5%;
+}
+.box-width(@nu:150px){
+  width: @nu;
+}
+.border-radius(@lt:50%,@rt:50%,@rb:50%,@lb:50%){
+  -webkit-border-radius:@arguments;
+  -moz-border-radius: @arguments;
+  border-radius: @arguments;
+}
+.container{
+  width: 52%;margin: 200px auto;
+  .box{
+    .box-width(100px);
+    height: 100px;
+    background:greenyellow;
+    float: left;
+    margin-right: 10px;
+  }
+  .box:first-child{
+    .box-width();
+    .border-radius(50%);
+  }
+  .box:nth-child(2){
+    .box-width();
+    .border-radius(60px,60px,60px,60px);
+  }
+  .box:nth-child(3){
+    .box-width();
+    .border-radius(0,120px,0,120px);
+  }
+  .box:last-child{
+    .box-width();
+    height: 150px;
+    .border-radius(0,0,60px,60px);
+  }
+}

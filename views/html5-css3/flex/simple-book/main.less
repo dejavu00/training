@@ -1,0 +1,448 @@
+*{
+  margin: 0 ;padding: 0;
+}
+body{
+  font-size: 62.5%;font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+img{
+  width: 100%;height: 100%;
+}
+//初始化变量
+@red:#ea6f5a;
+@gray:#eee;
+.border(@nu:1px,@color:#f0f0f0){
+  border: @nu solid @color;
+}
+.border-radius(@nu:10px){
+  -webkit-border-radius:@nu ;
+  -moz-border-radius: @nu;
+  border-radius: @nu;
+}
+.headPic{
+  vertical-align: middle;
+  width: 3.2em;
+}
+.flex{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.font-color(gray){
+  color:@gray;
+}
+.font-color(tag-a){
+  color: #969696;
+}
+.font-color(red){
+  color: @red;
+}
+
+.font-size(@nu:1.5em){
+  font-size: @nu;
+}
+header{
+  width: 100%;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  .flex;
+  background: #fff;
+  border-bottom: 1px solid #dcdcdc;
+}
+.logo{
+  flex-grow: 2;
+  img{
+    padding: 0.3em ;
+    width: 5.5em;height: 2.6em;
+  }
+}
+.headerMain-a{
+  padding: 0.3em 2em 0 2em;
+  .font-size(1.7em);
+  color: #000;
+}
+.headerMain{
+  .flex;
+  flex-grow: 7;
+  justify-content: flex-start;
+  a{
+    .headerMain-a
+  }
+  a:first-child{
+    .font-color(red);
+  }
+}
+.search{
+  width: 10em;padding: 0.6em;
+  .border(1px);
+  .border-radius(20px);
+  background: @gray;
+  .font-size();
+}
+.person{
+  flex-grow: 1;
+  padding-top: 0.3em;
+  a{
+    padding: 0.5em 1.2em 0.5em 1.2em;
+    .font-size(1.7em);
+    .font-color(tag-a);
+    .border-radius(3px);
+  }
+  a:nth-child(n+3){
+    .font-color(red);
+  }
+  a:nth-child(3){
+    .border(1px,@red);
+    line-height: 1.5em;
+    &:hover{
+      background: rgba(236,97,73,.05);
+    }
+  }
+  a:last-child{
+    margin-left: 1em;
+    background: @red;
+    color: #fff;
+  }
+}
+.banner{
+  padding-top: 5.5em;
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 27.2em;
+  .flex;
+  .banner-left{
+    width: 65%;
+    #left-viewport{
+      position: relative;
+      li{
+        position: absolute;left: 0;top: 0;
+        height: 27.2em;
+        display: none;
+      }
+      li.active{
+        display: block;
+      }
+    }
+  }
+  .banner-right{
+    overflow: hidden;
+    position: relative;
+    width: 35%;
+    #right-viewport{
+      position: absolute;
+      top: 0;
+      .flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      .item{
+        height: 13.6em;
+      }
+    }
+  }
+  span{
+    width: 2em;height: 3em;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    .border-radius(8px);
+    color: #fff;
+    .font-size(2em);
+    line-height: 3em;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+
+  }
+  &:hover span{
+    display: block;
+  }
+  #left{
+    left: -2px;
+  }
+  #right{
+    right: -2px;
+  }
+}
+
+.content{
+  padding-top: 5em;
+  width: 960px;
+  margin: 0 auto;
+  .flex;
+}
+section{
+  width: 65%;
+}
+
+article  {
+  margin-bottom: 2em;
+  .for-title{
+    padding-left: 1em;
+    margin-bottom: 1em;
+    border-left: 2px solid @red;
+  }
+  .tagS{
+    a{
+      display: inline-block;
+      background: @gray;
+      .border(1px,#dcdcdc);
+      padding-right: 0.7em;
+      .border-radius();
+      overflow: hidden;
+      &{
+        margin: 0.7em;
+      }
+      span{
+        padding-left: 0.7em;
+        .font-size();
+        color: #000;
+      }
+      img{
+       .headPic;
+      }
+    }
+    #more{
+      padding: 0.3em;
+      border: 0;
+      background: #fff;
+      .font-color(tag-a);
+      .font-size();
+    }
+  }
+
+  .article-item{
+    .flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 1em;
+     .user{
+      flex-basis: 100%;
+      border-top: 1px solid gainsboro;
+      padding: 1.5em 0;
+        img{
+          .headPic;
+          .border-radius(50%);
+        }
+        span{
+          padding-left: 1em;
+        }
+        span.update{
+          .font-color(tag-a);
+        }
+    }
+    .item-content{
+      width: 75%;
+      h1{
+        font-size: 1.8em;
+       padding-bottom: 0.5em;
+      }
+      p{
+        font-size: 1.4em;
+        line-height: 1.6em;
+        width: 100%;
+        .font-color(tag-a);
+      }
+      .article-mes{
+        margin-top: 1em;
+        .collect-tag{
+          .font-color(red);
+          .border(1px,@red);
+          .border-radius(5px);
+          padding: 0.3em 0.7em;
+
+        }
+        i{
+          padding: 0 0.5em;
+          display: inline-block;
+          font-size: 1.5em;
+          font-style: normal;
+          text-align: center;
+          line-height: 1.5em;
+          .font-color(tag-a);
+          width: 1.5em;height: 1.5em;
+        }
+      }
+    }
+    .item-pic{
+      width: 23%;
+      img{
+        width: 12em;
+        height:10em;
+        border:1px solid gainsboro;
+      }
+
+    }
+  }
+
+#for-more{
+  text-align: center;
+  background:#a5a5a5;
+  margin-top: 3em;
+  padding: 0.7em;
+ .font-size();
+  .border-radius(10px);
+  a{
+    display: block;
+    color: #fff;
+  }
+}
+}
+
+article .tagS:last-child a i{
+  background: url("http://upload.jianshu.io/collections/images/45/2007112012211889_2.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/195/h/195") no-repeat;
+
+}
+
+aside{
+ width: 30%;
+  ul li{
+    margin-top: 0.5em;
+  }
+  .App{
+    .flex;
+    align-items: flex-end;
+    height: 14em;
+    margin-top: 1em;
+    background: url("http://cdn-qn0.jianshu.io/assets/web/app_download-e9146ff3a117129153d283495b51f40e.png") no-repeat;
+    background-size: 285px 160px;
+    a{
+      font-size: 1.3em;
+      color: #fff;
+      display: inline-block;
+     padding: 0.7em 2em ;
+      margin-bottom: 2em;
+      .border-radius(6px);
+    }
+    a:first-child{
+      background: #a5a5a5;
+    }
+    a:nth-child(2){
+      background: #8bc453;
+    }
+    a:last-child{
+      background: #6dacf4;
+    }
+  }
+  .author{
+    .author-title{
+      .flex;
+      justify-content: space-between;
+      margin-top: 2em;
+      span{
+        .font-color(tag-a);
+      }
+      a span{
+        padding: 0.4em 0.7em;
+        .border(1px);
+        .border-radius(10px)
+      }
+    }
+    .author-mes{
+      li{
+        .flex;
+        justify-content: space-between;
+        img{
+          width: 4.4em;
+          height: 4.4em;
+          .border(1px,gainsboro);
+          .border-radius(50%);
+          vertical-align: middle;
+        }
+        .author-mes-left{
+          .flex;
+          p{
+            line-height: 1.8em;
+            margin-left: 0.8em;
+            .author-name{
+              font-weight: bold;
+            }
+            .author-txt{
+              .font-color(tag-a);
+            }
+          }
+
+        }
+        .follow{
+          color: #42c02e;
+          line-height: 4.5em;
+        }
+      }
+    }
+    .for-more{
+      margin-top: 1em;
+      text-align: center;
+      color:#787878;
+      display: block;
+      background:#f7f7f7;
+      padding: 0.7em 0;
+      .border(1px, gainsboro);
+      .border-radius(5px);
+    }
+  }
+}
+footer{
+  .content;
+  justify-content: flex-start;
+  flex-direction: column;
+  .contact{
+    .flex;
+    margin-bottom: 1em;
+    justify-content: flex-start;
+    li a{
+      padding: 0 0.5em;
+      .font-color(tag-a);
+      &:hover{
+        color: #2f2f2f;
+      }
+    }
+  }
+  p{
+    color: #c8c8c8;
+    a{
+      color: #c8c8c8;
+      &:hover{
+        color: #2f2f2f;
+      }
+    }
+  }
+  .verification{
+    padding-bottom: 1em;
+    img{
+      width: 5em;
+    }
+  }
+}
+#backTop{
+  display: block;
+  width: 4em;
+  height: 4em;
+  background:  url("/training/public/images/toTop.png") 14px 17px   no-repeat;
+  background-size:1.5em 1em;
+  .border(1px,gainsboro);
+  position: fixed;right: 40px;bottom: 60px;
+}
+@media all and (max-width: 960px){
+    .banner,.content,footer{
+      width: 720px;
+    }
+  .headerMain {
+    a{
+      display: none;
+    }
+
+  }
+    //@media  (min-width: 370px){
+    //  width: 200px;height: 200px;margin-left: 1em;
+    //  background: gold;
+    //}
+  }

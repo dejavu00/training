@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>垂直居中</title>
+    <style type="text/css">
+        .box,.item{
+            background: red;
+            width: 150px;height: 150px;
+            font:bold 20px/150px cursive;
+            color: #fff;
+            text-align: center;
+        }
+        .item{
+            width: 0;height: 0;
+            -webkit-transition:  600ms;
+            -moz-transition:  600ms;
+            -o-transition:  600ms;
+            transition:  600ms;
+            position: absolute;
+            top: 0;left: 0;
+        }
+        .item1{
+             display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 635px;
+        }
+        .item2{
+            background: yellow;
+            width: 150px;height: 150px;
+            top: 50%;left: 50%;
+            -webkit-transform:translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+        .item3{
+            width: 150px;height: 150px;
+            background: blue;
+            top: 50%;left: 50%;
+            margin-left: -75px;margin-top: -75px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="btn-group" style="float: left">
+    <button type="button" class="btn">flex</button>
+    <button type="button" class="btn">定宽居中</button>
+    <button type="button" class="btn">不定宽居中</button>
+</div>
+<div class="item">flex</div>
+<div class="item">定宽居中</div>
+<div class="item">不定宽居中</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" >
+    (function () {
+        $(".btn").click(function () {
+            var i=$(this).index();
+            var temp=null;
+            switch(i)
+            {
+                case 0:
+                   temp='item1';
+                    break;
+                case 1:
+                    temp='item2';
+                    break;
+                default:
+                    temp='item3';
+            }
+                if(temp=='item1'){
+                    $(document.body).empty().addClass("item1").append("<div class='box '>flex</div>");
+                    return;
+                }
+            $(".item").eq(i).addClass(temp);
+        })
+    })()
+
+</script>
+</body>
+</html>

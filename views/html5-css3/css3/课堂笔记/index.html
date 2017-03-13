@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>css3介绍</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css">
+        /*body{*/
+            /*background: greenyellow;*/
+        /*}*/
+        h1{
+            color: greenyellow;
+            text-shadow:8px -10px 0 #000;
+        }
+        .box{
+            width: 300px;height: 150px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            box-shadow: 10px 20px 10px #000;
+        }
+        .container{
+            width: 300px;
+            background: #ccc;
+        }
+        .box-out{
+            margin-top: 70px;
+            background: greenyellow;
+            width: 300px;height: 150px;
+            border: 20px solid darkgoldenrod;
+            /*outline: 10px dashed black;*/
+            /*-webkit-border-radius: 20px;*/
+            /*-moz-border-radius: 20px;*/
+            /*border-radius: 20px;*/
+            box-shadow: 0 0 0 10px red;
+            outline: 10px dashed darkmagenta;
+        }
+        .item{
+            text-align: center;
+            line-height: 150px;
+            padding: 20px;
+            width:150px;height: 150px;
+            border: 2px solid greenyellow;
+            border-radius: 10px 10px 10px 10px;
+            background: url("/training/public/images/love-food/icons.png") no-repeat;
+            /*background-origin: content-box;默认是靠近盒子顶部，使用这个属性，就在内容区里面。*/
+            /*background-clip: content-box;  内容区附色*/
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+<!--<h1>红色阴影</h1>-->
+<!--<div class="container">-->
+<!--<div class="box">Box Shadow</div>-->
+<!--</div>-->
+<!--<div class="box-out"></div>-->
+<div class="item">
+    123,go on with me.
+</div>
+</body>
+</html>

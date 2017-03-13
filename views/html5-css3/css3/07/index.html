@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>菱形喵咪图</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css">
+        ul{
+            margin: 100px auto;padding: 0;
+            width: 1300px;
+            height: 230px;
+            /*display: -webkit-flex;*/
+            /*display: flex;*/
+            /*justify-content: flex-end;*/
+        }
+
+         li{
+            list-style: none;
+            width: 100px;height: 100px;
+            position: relative;
+            margin-right: 70px;
+            float: left;
+            overflow: hidden;
+            -webkit-transform:rotate(45deg)  ;
+            -moz-transform: rotate(45deg) ;
+            transform: rotate(45deg) ;
+
+
+        }
+         li::after{
+             width: 150%;height: 150%;
+             -webkit-transform:rotate(-45deg)  ;
+             -moz-transform: rotate(-45deg) ;
+             transform: rotate(-45deg) ;
+             content: '';
+             position: absolute;left:-20px;
+             top:-20px;
+             background: url("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1569462993,172008204&fm=5") no-repeat;
+             background-size: cover;
+         }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>信封+渐变+导航</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css">
+        .container{
+            position: absolute;
+            left:0;
+            animation: move 10s infinite;
+        }
+        /*@keyframes move {*/
+            /*0%{*/
+                /*left:0;*/
+                /*top:0;*/
+            /*}*/
+            /*25%{*/
+                /*left:230px;*/
+                /*top:0;*/
+            /*}*/
+            /*50%{*/
+                /*left:230px;*/
+                /*top:700px;*/
+            /*}*/
+            /*75%{*/
+                /*left:150px;*/
+                /*top:500px;*/
+                /*transform:rotate(5550deg);*/
+            /*}*/
+            /*100%{*/
+
+                /*left:0;*/
+                /*top:0;*/
+            /*}*/
+        /*}*/
+        .envelop{
+            margin-top: 20px;
+            width: 300px;height: 150px;
+            padding: 10px;
+            background: #22bcdd url("https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=3747971867,306383236&fm=85&s=D888BA5544026B4D561ACC6D0300E079") no-repeat;
+           background-size:  320px 170px;
+            border: 10px dashed red;
+        }
+        .grid{
+            margin-top: 20px;
+            width: 300px;height: 150px;
+            background: linear-gradient(#000 33.3%,red 33.3%,red 66.7%, yellow 66.7%,yellow 100%) ;
+        }
+        .star{
+            width: 150px;height: 150px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background: radial-gradient(#fff 0,gold 20%,green 30%,blue 60%,black 80%);
+        }
+        .grid2{
+            background: linear-gradient(90deg,gold 50%,green 50%) ;
+            background-size: 50px 50px;
+        }
+        .navUl{
+           width: 500px;
+           position: absolute;
+            left: 50%;top: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+        .navUl li{
+            position: relative;
+            float: left;
+            list-style: none;
+            width: 70px;height: 40px;
+            font-style: normal;
+            text-align: center;
+            line-height: 40px;
+        }
+        .navUl li a{
+            display: block;
+            text-decoration: none;
+        }
+        .navUl li::after{
+            width: 100%;height: 100%;
+            transform: skew(-30deg) ;
+            background: greenyellow;
+            content: '';
+            top:0;left: 0;
+            position: absolute;
+            z-index: -1;
+            border-right: 4px solid #fff;
+        }
+        .navUl li:hover::after,.navUl li.active::after{
+            background: red;
+        }
+        .navUl li:hover a,.navUl li.active a{
+            color: #fff;
+        }
+        /*.navUl li:hover,.navUl li.active {*/
+            /*background: red;*/
+        /*}*/
+        /*.navUl li:hover a,.navUl li.active a{*/
+            /*color: #fff;*/
+        /*}*/
+        /*.container div{*/
+            /*float: left;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="envelop"></div>
+    <div class="grid"></div>
+    <div class="grid grid2"></div>
+    <div class="star"></div>
+</div>
+<ul class="navUl">
+    <li class="active"><a href="javascript:void(0)">首页</a></li>
+    <li><a href="javascript:void(0)">首页</a></li>
+    <li><a href="javascript:void(0)">首页</a></li>
+    <li><a href="javascript:void(0)">首页</a></li>
+    <li><a href="javascript:void(0)">首页</a></li>
+    <li><a href="javascript:void(0)">首页</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,385 @@
+*{
+    margin: 0 auto;padding: 0;
+}
+body{
+    font-size: 62.5%;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+}
+a{
+    text-decoration: none;
+    color: #444;
+
+}
+img{
+    width: 100%;height: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #fff;
+    opacity: 0.8;
+}
+.clear{
+    width: 100%;height: 20px;
+    clear: both;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+header{
+    background-color: #333;
+    overflow: hidden;
+   font-size: 0.9em;
+}
+i{
+    display: inline-block;
+    background: url(https://www.lgstatic.com/www/static/common/widgets/header_c/modules/img/app_icon_0495d1d.png) no-repeat;
+    width: 1em;height: 1.2em;
+    background-size: contain;
+    vertical-align: middle;
+}
+#app{
+    font-size: 1.4em;
+    padding: 0.3em 0 0 2em;
+}
+.app{
+    opacity: 1;
+    margin-right: 0.5em;
+    padding-right: 0.5em;
+    color: #08d7a2;
+    border-right: 1px solid #5d5d5d;
+}
+#options{
+    width:28%;
+}
+#options ul li {
+    padding: 0.3em 0.7em;
+    float: left;
+}
+#options ul li a{
+    font-size: 1.6em;
+    padding-right: 1em;
+    border-right: 1px solid #5d5d5d;
+}
+.name i{
+    height: 1em;
+    background: url(../../../../public/images/arrow.png) no-repeat;
+}
+nav{
+    background: #fafafa;
+    border-bottom: 1px solid gainsboro;
+}
+.navMain{
+    width: 72%;
+    overflow:auto;
+    padding: 0.7em 0 0.3em 0;
+
+}
+.navMain h1{
+    font-size: 2.1em;
+    padding: 0 0.5em 0 1em;
+    color: #00b38a;
+}
+.navMain ul li{
+    float: left;
+    padding: 0.7em 1em;
+}
+
+.navMain ul li a{
+    color: grey;
+    padding-bottom:0.8em;
+}
+.navMain ul li a.active,.navMain ul li a:hover{
+    border-bottom: 2px solid #08d7a2;
+    color: black;
+}
+
+#cityS{
+     margin-top: 1em;
+}
+#cityS a{
+
+    padding-left: 0.4em;
+    color: grey;
+    font-size: 0.8em;
+}
+.city,.navMain ul li{
+    font-size: 1.8em;
+}
+section,.foot{
+    width: 73%;
+}
+aside{
+    width: 23%;
+    background: #fafafa;
+}
+
+.type p{
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.type a{
+    font-size: 1.5em;
+    line-height: 1.8em;
+    padding-right: 1em;
+    float: left;
+    color: black;
+}
+.type i{
+    padding-right: 0.4em;
+    width: 0.8em;height: 0.8em;
+    background: url("https://www.lgstatic.com/www/static/index/modules/sidebar/img/arr_6c6ecd7.png ");
+    background-size: cover;
+}
+.type a:hover{
+    text-decoration: underline;
+}
+.type-last{
+    font-size: 1.6em;
+    border-bottom: 2px solid #00b38a;
+    padding: 0.4em 0 0 1em;
+    border-top: 0.7em solid #fff;
+
+}
+.type-last p{
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+.type-last p i{
+   margin-right: 0.5em;
+    width: 1em;height: 1em;
+    background: url("https://www.lgstatic.com/www/static/index/modules/sidebar/img/arr_btn_34cdbac.png") 0 -11px;
+    background-size: cover;
+}
+.type{
+    position: relative;
+    padding: 1.6em 0 0 1em;
+    overflow: auto;
+    border: 2px solid #fafafa;
+}
+.type:hover{
+    border: 2px solid #c9cbce;
+    border-right-width:0 ;
+    background-color: #fff;
+}
+article{
+    width: 70%;
+
+}
+#search input{
+    border: 2px solid #08d7a2;
+}
+.search-txt{
+    outline: none;
+    padding: 0.5em 0  0.5em 0.5em;
+    width: 76%;
+    font-size: 1.6em;
+}
+.search-btn{
+    cursor: pointer;
+    color:#fff;
+    border: 0;
+    line-height: 2.8em;
+    background-color: #00b38a;
+    border-bottom: 1px solid #00b38a;
+    width: 18%;
+}
+#key{
+    font-size: 1.4em;
+    padding: 0.5em 0;
+}
+#key a{
+    padding:0 0.7em ;
+    color:#00b38a ;
+}
+#key a:hover{
+    text-decoration: underline;
+}
+.banTop-l{
+    width: 80%;
+    height: 160px;
+}
+.banTop-r{
+    width: 18%;
+}
+
+.banTop-r a img{
+   border: 3px solid gray;
+
+}
+.banBto .banBto-box{
+    width: 113px;height: 113px;
+    float: left;
+}
+#tab {
+
+    background: #f6f6f6;
+}
+#tab a{
+    line-height: 1.6em;
+    font-size: 1.8em;
+    padding: 0.3em 1em;
+   display: inline-block;
+    color: grey;
+}
+#tab a:hover,#tab a.active{
+    background: #fff;
+    color: black;
+    border-top: 2px solid #00b38a;
+}
+.job-mes{
+    width: 47%;
+}
+.company-mes{
+     width: 40%;
+ }
+.job-name a{
+    font-size: 1.7em;
+    color: #00b38a;
+}
+.update{
+    font-size: 1.4em;
+    padding-left: 1em;
+    color: grey;
+}
+.update i{
+    width: 1.8em;height: 1.8em;
+    margin-left: 0.5em;
+    vertical-align: top;
+    background: url("https://www.lgstatic.com/www/static/index/modules/job_list/img/icon-chat_4a70ffc.png") no-repeat;
+}
+.job-mes p{
+    margin-top: 1em;
+}
+.salary{
+    font-size: 1.6em;
+    color: #fa6041;
+}
+.experience,.introduce{
+    font-size: 1.4em;
+    padding-left: 1em;
+    color: #333;
+}
+.company-mes p{
+    margin-bottom: 1.2em;
+}
+.company-mes p a{
+    font-size: 1.7em;
+    color: #00b38a;
+
+}
+.introduce{
+    padding:  0;
+}
+.job-tags{
+    color: #333;
+   padding:0.8em 0;
+    background: #f6f6f6;
+    height: 2em;
+    border-bottom: 1px dashed gainsboro;
+}
+.job-tags p span{
+    margin-left: 1em;
+    padding: 0.4em;
+    display: inline-block;border: 1px solid gainsboro;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.job-tags>span{
+    line-height: 2em;
+    font-size: 1.5em;
+}
+#more {
+    opacity: 0;
+    text-align: center;
+    display: block;width: 7em;
+    padding: 0.3em 0;
+    background: #00b38a;
+    font-size: 1.6em;
+}
+#more:hover{
+    opacity: 1;
+}
+#more i{
+    
+    background:url("https://www.lgstatic.com/www/static/index/modules/job_list/img/arrow_54116b2.png") no-repeat;
+}
+#links{
+    height: 8em;
+    padding-top: 0.5em;
+    border-top: 1px solid gainsboro;
+}
+#links dt{
+    font-size: 1.6em;
+    padding-right: 1em;
+}
+#links a{
+    line-height: 1.9em;
+    padding: 0 0.6em;
+    border-right: 1px solid gainsboro;
+    color:#555;
+}
+.foot div{
+    overflow: auto;
+}
+.foot div img{
+    width: 198px;height: 19px;
+}
+.foot ul{
+    padding-left: 2em;
+}
+.foot ul li{
+    float: left;
+    font-size: 1.4em;
+    color: #555;
+}
+.foot ul li:last-of-type{
+    padding-left: 1em;
+}
+.foot ul li a{
+    padding: 0 0.4em;
+    font-size: 0.9em;
+    color: #555;
+}
+.foot ul li a i,.type p span i{
+    width: 3em;height: 2em;
+    background: url("https://www.lgstatic.com/www/static/index/modules/sidebar/img/newLabel_a3b2897.png") no-repeat;
+}
+.foot p{
+    color: #d5d5d5;
+    text-align: center;
+}
+.foot p img{
+ width: 60px;height: 25px;
+}
+#backTop{
+    display: block;
+    width: 29px;height: 72px;
+    position: fixed;
+    right: 100px;bottom: 160px;
+    background: url("https://www.lgstatic.com/www/static/common/widgets/footer_c/modules/img/backtop_6e69c27.png") no-repeat;
+}
+#backTop:hover{
+    background-position-x: -28px;
+}
+#feedback{
+    position: fixed;
+    right: 90px;bottom: 100px;
+}
+#feedback a{
+    display: block;
+    width: 30px;height: 30px;
+    background: url("https://www.lgstatic.com/www/static/common/widgets/footer_c/modules/img/feedback_776e64f.png") no-repeat;
+}
+#feedback a:hover{
+    background-position-y: -31px;
+}
+#feedback span{
+    font-size: 1.2em;
+}
