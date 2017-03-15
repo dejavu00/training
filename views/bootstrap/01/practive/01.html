@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Title</title>
+    <link href="/training/public/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/training/public/components/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body{
+            background: #F2F2F2;
+            font-size: 62.5%;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #header{
+            height: 6em;
+            background: #75C6BF;
+        }
+        #header h1,.nav li a{
+            color: #fff;
+        }
+        .logo{
+            padding-left: 12em;
+        }
+        .logo h1 sub{
+            font-size: 0.5em;
+        }
+        .nav{
+            padding-right: 6em;
+        }
+        .nav li{
+            padding-top: 1.6em;
+        }
+
+        .nav li .drop{
+            padding: 0 15px ;
+        }
+        .content .container-fluid,.carousel,.item{
+            background: #7F8B8B;
+            height: 40em;
+        }
+        .content .container-fluid{
+            padding: 0;
+        }
+        .carousel-caption{
+            bottom:15em;
+        }
+        .carousel-caption h1{
+            font-weight: bold;
+            width: 50%;
+
+        }
+        .carousel-caption p{
+            margin: 1em auto;
+            width: 53%;
+            line-height: 2em;
+            background: #404646;
+        }
+        .carousel-caption h1,.carousel-caption p{
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+        .left,.right{
+            position: absolute;
+            top: 50%;
+
+            color: #fff;
+        }
+        .right{
+            right: 0;
+        }
+        .carousel-indicators li, .carousel-indicators li.active{
+            border: 0;
+            width: 4em;
+            height: 0.6em;
+            border-radius: 0;
+            background: #AFB7B8;
+            margin: 0;
+        }
+        .carousel-indicators li.active{
+            background: #E1524A;
+
+        }
+        .carousel-indicators{
+
+            bottom: -52px;
+        }
+        .services{
+            overflow: auto;
+            padding: 0.7em 2em;
+            margin: 4em 0;
+            background: #EBEBEB;
+        }
+        .services h1{
+            color: #7F8C8C;
+        }
+        .services p{
+            margin-top: 1em;
+            color: #868686;
+        }
+        .services button{
+            margin-left: 2em;
+            color: #fff;
+
+        }
+        .row .col-md-3{
+            text-align: center;
+            padding: 0;
+        }
+        .box{
+            background: #fff;
+            height: 20em;
+            padding: 1em;
+            background-clip: content-box;
+        }
+        .box i{
+            font-size: 8.6em;
+            color: #E1524A;
+            margin-top: 1em;
+        }
+        .box p{
+            padding-top: 0.5em;
+            font-weight: bold;
+        }
+        .box span{
+            padding: 0 0.6em;
+        }
+        .box button{
+            padding: 0.3em 3em;
+            position: absolute;
+            -webkit-transform:translate(-50%);
+            transform: translate(-50%);
+            left: 50%;
+            color: #fff;
+            bottom:0;
+        }
+        .why{
+            color: #E1524A;
+        }
+        .why +span{
+            display: block;
+        }
+        .images{
+          left: 50%;
+            transform: translate(-50%);
+            position: absolute;
+            bottom: -10em;
+        }
+        .wrap{
+            height: 350px;
+            background: #B0B8B9;
+            position: relative;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .your-img{
+            width: 100%;
+            position: absolute;bottom: 0;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            height: 85%;
+            background: #62B9B0;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+           border: 5px solid #B0B8B9;
+            line-height: 300px;
+        }
+        .col-md-4{
+            padding: 0;
+        }
+        .col-md-4 .wrap{
+
+            margin: 0;
+            height:450px ;
+        }
+
+        .your-img-active{
+            line-height: 375px;
+            background: #7F8C8C;
+        }
+
+        .wrap p i{
+            margin: 1em 0.5em;
+            display: inline-block;
+            border-radius: 50%;
+            background: #fff;
+            width: 20px;height: 20px;
+
+        }
+        .wrap p i.pull-right{
+            margin-right: 2em;
+            height: 12px;
+        }
+        .fa-arrow-right{
+            color:#E1524A;
+        }
+        .choose li{
+            text-align: left;
+            line-height:2em;
+        }
+        .content .move-box{
+        background:#EBEBEB;margin-top: 7em;height: 600px;position: relative;
+        }
+        .move-container{
+            margin-top: 14em;
+        }
+        .txt{
+            background: #fff;
+            padding:7px;
+        }
+        .bg{
+            position: relative;
+            width: 120px;height: 58px;
+            display: inline-block;
+            background: url("/training/public/images/bootstrap/boot.png") no-repeat;
+        }
+        .bg::after{
+            content: '50';
+            font-weight: bold;
+            font-size: 20px;
+            left: 50px;
+            top: 25px;
+            position: absolute;
+        }
+        .bg2{
+            background-position: -120px 0;
+        }
+        .bg2::after{
+            content: '70';
+        }
+        .bg3{
+            background-position: -240px 0;
+        }
+        .bg3::after{
+            content: '80';
+        }
+        .bg4{
+            background-position: -361px 0;
+        }
+        .bg4::after{
+            content: '100';
+        }
+        .jquery{
+            margin-bottom: 20px;
+            line-height:225px;
+            height: 165px;
+            background: #fff;
+            background-clip: content-box;
+        }
+        .bg5{
+            height: 30px;
+            background:  url("/training/public/images/bootstrap/boot.png") 0 -72px no-repeat;
+          
+        }
+        .bg5::after{
+            content: '';
+        }
+        .progress{
+            margin-bottom: 0;
+            margin-top:12px;
+        }
+        footer{
+            margin-top: 80px;
+            color: #fff;
+            background: #75C6BF;
+        }
+        .links h2{
+            color:#3B6360 ;
+        }
+        .links,.links ul li a{
+            color: #fff;
+        }
+        .update{
+            color: #3B6360;
+        }
+        .bottom{
+            clear: both;
+            padding: 0;
+            background: #6AB3AC;
+            height: 60px;
+            line-height: 60px;
+        }
+        .bottom p{
+            margin: 0;
+        }
+        .bottom p.pull-left{
+            padding-left: 20em;
+        }
+        .bottom p.pull-right{
+            padding-right: 15em;
+        }
+        .bottom p i{
+            padding: 0 0.5em;
+        }
+       @media all and (max-width: 1002px) {
+           .hides,.nav,.row-hide,.images,.jquery{
+               display: none;
+           }
+           .logo{
+               padding-left: 0;
+           }
+           .choose li{
+               padding-left: 1em;
+           }
+           .content .move-box{
+               height: 200px;
+           }
+           .move-container{
+               margin-top: 4em;
+           }
+           .navbar-toggle{
+               display: block;
+               border: 1px solid gainsboro;
+           }
+           .navbar-toggle .icon-bar{
+               background:  #fff;
+           }
+           .bottom p{
+               padding: 0!important;
+           }
+           .fa-5x{
+               font-size: 3em;
+           }
+
+       }
+
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container-fluid">
+        <div class="logo pull-left">
+            <h1>MODUS <sub>VERSUS</sub> </h1>
+        </div>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">ABOUT</a></li>
+            <li role="presentation"><a href="#">SERVICES</a></li>
+            <li role="presentation">
+                <a href="#" class="drop">
+                    <button type="button" class="btn btn-danger">
+                        <span class="caret"></span>
+                        PORTFOLIO
+                    </button>
+                </a></li>
+            <li role="presentation"><a href="#">BLOG</a></li>
+            <li role="presentation"><a href="#">FEATURES</a></li>
+            <li role="presentation"><a href="#">CONTACTS</a></li>
+            <li role="presentation"><a href="#"><i class="fa fa-search"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <div class="container-fluid hides">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" ></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+
+                    <div class="carousel-caption">
+                        <h1 class="text-center center-block btn-danger">VESTIBULUM</h1>
+                        <p>   Maecenas tincidunt,augue et rutrum condimentum,<br/>libero
+                            lectus mattis orci,ut commodo.</p>
+                    </div>
+                </div>
+            </div>
+         <button type="button" class="btn left btn-danger">
+             <i class=" fa fa-angle-double-left fa-2x"></i>
+         </button>
+            <button type="button" class="btn right btn-danger">
+                <i class=" fa  fa-angle-double-right fa-2x"></i>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="services">
+            <h1 class="pull-left">some of our top services</h1>
+            <p class="pull-left">Ut eleifend libero sed neque rhoncus consequat.Maecenas tincidunt,augue et rutrum condimentum,libero lectus mattis orci,ut commodo.</p>
+            <button type="button" class="btn pull-left btn-danger" >VIEW MORE</button>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="box">
+                    <i class="fa fa-thumbs-o-up  " ></i>
+                    <p>SUSPENDISSE</p>
+                    <span>
+                        Ut eleifend libero sed neque rhoncus consequat.Maecenas tincidunt,augue et rutrum condimentum,libero lectus mattis orci,ut commodo.
+                    </span>
+                    <button type="button" class="btn btn-danger">read more</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="box">
+                    <i class="fa  fa-key  " ></i>
+                    <p>MAECENAS</p>
+                    <span>
+                        Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+                    </span>
+                    <button type="button" class="btn btn-info">read more</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="box">
+                    <i class="fa fa-flag " ></i>
+                    <p>ALIQUAM</p>
+                    <span>
+                       Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non.
+                    </span>
+                    <button type="button" class="btn btn-info">read more</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="box">
+                    <i class="fa fa-flask " ></i>
+                    <p>HABITASSE</p>
+                    <span>
+                        Astehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non.
+                    </span>
+                    <button type="button" class="btn btn-info">read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid move-box" >
+        <h1 class="why text-center">WHY MODUS VERSUS?</h1>
+        <span class="text-center">Ut eleifend libero sed neque rhoncus consequat.Maecenas tincidunt,augue et rutrum condimentum,libero lectus mattis orci,ut commodo.</span>
+        <div class="row images container">
+            <div class="col-md-3 col-md-offset-1">
+                <div class="wrap">
+                    <p class="text-left">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i class="pull-right"></i>
+                    </p>
+                    <div class="your-img">
+                        your images
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="wrap">
+                    <p class="text-left">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i class="pull-right"></i>
+                    </p>
+                    <div class="your-img your-img-active">
+                    your images
+                    </div>
+            </div>
+        </div>
+            <div class="col-md-3 ">
+                <div class="wrap">
+                    <p class="text-left">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i class="pull-right"></i>
+                    </p>
+                    <div class="your-img">
+                        your images
+                    </div>
+                </div>
+    </div>
+        </div>
+</div>
+    <div class="container move-container" >
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Why Choose Us?</h3>
+                <ul class="choose">
+                    <li><a href="#"><i class="fa  fa-arrow-right"></i>Quisque at massa ipsum</a></li>
+                    <li><a href="#"><i class="fa  fa-arrow-right"></i>Maecenas a lorem augue,egestas</a></li>
+                    <li><a href="#"><i class="fa  fa-arrow-right"></i>Cras vitae felis at lascus eleifend</a></li>
+                    <li><a href="#"><i class="fa  fa-arrow-right"></i>Etiam auctor diam pellentesque</a></li>
+                    <li><a href="#"><i class="fa  fa-arrow-right"></i>Nulla ac massa at dolor</a></li>
+                    <li><a href="#"><i class="fa  fa-arrow-right"></i>Condiementum eleifend vitae vitae</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <p>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus <a
+                        href="#" class="text-danger">vehicula mattis.</a>
+                    Nulla ac massa at dolor condimentum eleifend vitae vitae urna.
+                </p>
+                <div class="row row-hide" style="padding-top: 70px">
+                    <div class="col-md-3">
+                        <span class="bg"></span>
+                        SUSPENDISSE</div>
+                    <div class="col-md-3">
+                        <span class="bg bg2"></span>MAECENAS </div>
+                    <div class="col-md-3"> <span class="bg bg3"></span> ALIQUAM  </div>
+                    <div class="col-md-3"> <span class="bg bg4"></span> HABITASSE  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3 style="font-weight: 400">What Client’s Say ?</h3>
+                <div class="txt">
+                    Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam
+                    pellentesque lectus vehicula mattis. <b>Nulla ac massa at dolor condimentum</b>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin: 50px 0;line-height: 40px">
+            <b class="pull-left">Our Happy Clients</b>
+            <div class="progress pull-left" style="width: 75%;margin: 12px 10px 0 10px">
+
+                <div class="progress-bar " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    60%
+                </div>
+            </div>
+            <button type="button" class="btn">
+                <i class="fa fa-arrow-left " style="color: #fff"></i>
+            </button>
+            <button type="button" class="btn btn-danger">
+                <i class="fa fa-arrow-right " style="color: #fff"></i>
+            </button>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-sm-6 jquery text-center"><span class="bg bg5"></span></div>
+            <div class="col-md-2 col-sm-6 jquery text-center"> <span class="bg bg5 text-center"></span></div>
+            <div class="col-md-2 col-sm-6 jquery text-center"> <span class="bg bg5 text-center"></span></div>
+            <div class="col-md-2 col-sm-6 jquery text-center"> <span class="bg bg5 text-center"></span></div>
+            <div class="col-md-2 col-sm-6 jquery text-center"> <span class="bg bg5 text-center"></span></div>
+            <div class="col-md-2 col-sm-6 jquery text-center"> <span class="bg bg5 text-center"></span></div>
+        </div>
+
+    </div>
+</div>
+<footer>
+    <div class="container-fluid" style="padding: 0">
+        <div class="foot">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h1>MODUS <sub>VERSUS</sub> </h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec .</p>
+                        <address>
+                            <strong>phone:</strong>182 2569 5896<br/>
+                            <strong>e-mail:</strong>info@modu.versus
+                        </address>
+                    </div>
+                    <div class="col-md-2 links">
+                        <h2>company</h2>
+                        <ul>
+                            <li><a href="#"><i class="fa  fa-angle-left"></i>  About</a></li>
+                            <li><a href="#"><i class="fa  fa-angle-left"></i> FAQ</a></li>
+                            <li><a href="#"><i class="fa  fa-angle-left"></i> Contact</a></li>
+                            <li><a href="#"><i class="fa  fa-angle-left"></i> Terms</a></li>
+                            <li><a href="#"><i class="fa  fa-angle-left"></i> Privacy</a></li>
+                            <li><a href="#"><i class="fa  fa-angle-left"></i>Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 links">
+                        <h2>Community</h2>
+                        <ul>
+                            <li><a href="#"><i class="fa  fa-angle-right"></i>Blog</a></li>
+                            <li><a href="#"><i class="fa  fa-angle-right"></i> Forum</a></li>
+                            <li><a href="#"><i class="fa  fa-angle-right"></i>  Support</a></li>
+                            <li><a href="#"><i class="fa  fa-angle-right"></i>  Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 ">
+                        <h2>from the BLOG</h2>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="/training/public/images/bootstrap/img.png" alt="未知">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <span class="update">26 May, 2013</span>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="/training/public/images/bootstrap/img.png" alt="未知">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <span class="update">26 May, 2013</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p class="pull-left">2013  ModusVersus</p>
+            <p class="pull-right">
+                <a href="#"><i class="fa  fa-facebook fa-5x"></i></a>
+                <a href="#"><i class="fa  fa-google-plus fa-5x"></i></a>
+                <a href="#"><i class="fa  fa-mail-forward (alias) fa-5x"></i></a>
+                <a href="#"><i class="fa  fa-rss fa-5x"></i></a>
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

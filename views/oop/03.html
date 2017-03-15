@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<script type="text/javascript">
+    function Person() {
+
+    }
+    Person.prototype.name='dengli';
+    Person.prototype.age=23;
+    Person.prototype.sayName=function () {
+        alert("我是实原型对象")
+    };
+    var p1=new Person();
+    p1.name='xiaoming';
+    delete p1.name
+//    alert(p1.name) ;//xiaoming
+    //1每次代码读取一个属性时，先在实例化对象中搜索，如果找不到，再在对应的原型对象中搜索，如果有则返回，
+//    如果2次都没有则返回undefined
+
+    //判断属性是原型属性或者实例属性
+
+//    alert(p2.hasOwnProperty('name')); //name 是其原型对象属性，不是实例对象属性
+        //in 操作符
+//    alert('name' in p1);  //通过实例判断属性是否存在,不管在原型对象或者实例对象中
+//    alert('name' in p2);
+    function hasPrototypeProperty(obj,property) {   //判断是否为原型属性，存在
+        return !obj.hasOwnProperty(property) && property in obj ;
+    }
+//    alert(hasPrototypeProperty(p1,'name'));
+    var p2=new Person();
+    p2.name='p2';
+    p2.age=22;
+    alert(Object.keys(p2));  //ECMA5新特性获取对象属性，实例对象或者原型对象
+    alert(Object.keys(Person.prototype));//age、name、sayName
+    alert(Object.getOwnPropertyNames(Person.prototype))//constructor、age、name、sayName,上面keys
+//    方法无法显示不能被枚举的属性如:constructor，此方法能枚举所有属性（包括不能被枚举的）。
+
+//    方法总结
+    alert(Person.prototype.isPrototypeOf(obj1));//判断实例对象obj1是否为另外一个对象的原型
+    alert(Object.getPrototypeOf(obj1)==Person.prototype);//通过实例对象获取其原型对象
+    //property in 实例对象  判断属性是否存在
+    //obj.hasOwnProperty(property) 判断是否属于实例对象属性
+   // function hasPrototypeProperty(obj,property) {   //判断是否为原型属性，存在
+//        return !obj.hasOwnProperty(property) && property in obj ;
+//    }
+   // Object.keys(实例对象或者原型对象) //ECMA5新特性获取对象属性，实例对象或者原型对象,
+//    Object.getOwnPropertyNames(Person.prototype)
+</script>
+</body>
+</html>

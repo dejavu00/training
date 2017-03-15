@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<script type="text/javascript">
+//    1.第一种工厂模式
+function createPerson(name,age,sex) {
+    var obj=new Object();
+    obj.name=name;
+    obj.age=age;
+    obj.sex=sex;
+    obj.getName=function () {
+        alert(this.name)
+    };
+    return obj;
+}
+//var obj1=createPerson('dl',22,'nan');
+//obj1.getName();
+//    2.第二种构造函数:首字母大写表示为构造函数(类的模板 )
+function Person(name,age,sex) {
+    this.name=name;
+    this.age=age;
+    this.sex=sex;
+    this.getName=function () {    //缺点，每个对象都创建了一个相同的方法，在02.html用prototype解决
+        alert(this.name)
+    }
+}
+//构造一个对象，new关键字 传递参数 执行模板代码 返回对象
+
+//    alert(obj2.constructor==Person); 判断是否输入Person构造
+//    alert(obj2 instanceof Person)  判断是否为Person创造实例
+        //创建对象3中方式
+//1.当作构造函数使用
+//var obj2=new Person('dl',22,'nan');
+ //2.作为普通函数去调用
+//    Person('dl',22,'nan');  //window.Person('dl',22,'nan');
+// getName() alert(name)
+//    3.在另一个对象作用域
+    var o=new Object();
+    Person.call(o,'dl',22,'nan');
+    alert(o.sex);
+    o.getName()
+</script>
+</body>
+</html>

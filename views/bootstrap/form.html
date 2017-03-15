@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="/training/public/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        .container{
+            margin-top: 20px;
+        }
+        .col-md-4{
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .col-md-offset-4{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-xs-4">姓名</div><div class="col-md-8 col-xs-8"><input type="text" placeholder="输入你的姓名"/></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-4">电话</div><div class="col-md-8 col-xs-8"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-4">email</div><div class="col-md-8 col-xs-8"><input type="email" /></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-4">毕业学校</div><div class="col-md-8 col-xs-8"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-4">毕业时间</div><div class="col-md-8 col-xs-8"><input type="date" /></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-4">照片</div><div class="col-md-8 col-xs-8"><input type="file" value="选择文件"/></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4">
+            <input type="submit" value="提交"/>
+        </div>
+    </div>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign in</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

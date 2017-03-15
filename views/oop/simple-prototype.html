@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<script type="text/javascript">
+//    function Person() {
+//
+//    }
+//    Person.prototype={
+//        //constructor：Person
+//        name:'dengli',
+//        age:12,
+//        sayHi:function () {
+//            alert("Hi");
+//        }
+//    };
+    var p1=new Person();
+    alert(Person.prototype.constructor==Person);//Object,false
+//    ECMA5之定义构造器
+//    第一个参数：重设构造对象。第二个参数：设置什么属性。第三个参数：options配置项
+    Object.defineProperty(Person.prototype,'constructor',{
+        enumerable:false,//枚举：不可
+        value:Person
+    })
+    alert(Person.prototype.constructor==Person);
+
+    //原型的动态属性
+function Person() {
+
+}
+//var p1=new Person();
+//    Person.prototype.sayHi=function () {
+//        alert('我是原型')
+//    }
+//    p1.sayHi();   //因为Person.prototype动态属性默认是Person，这里实例化对象p1
+    //调用方法存在
+
+var p1=new Person();
+Person.prototype={
+    constructor:Person,
+    name:'dengli',
+    age:12,
+    sayHi:function () {
+        alert("Hi");
+    }
+};
+p1.sayHi();//error因为上面实例化对象时，原型对象为Object，及对象内容为空{},无sayHi方法
+</script>
+</body>
+</html>
