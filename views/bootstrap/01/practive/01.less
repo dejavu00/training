@@ -1,0 +1,337 @@
+@num:6em;
+@w-color:#fff;
+@red-color:#E1524A;
+.bg-position(@nu:-120px){
+  background-position: -120px 0;
+}
+.align-center{
+  left: 50%;
+  -webkit-transform:translate(-50%);
+  transform: translate(-50%);
+  position: absolute;
+}
+.font-color{
+  color: @w-color;
+}
+.border-radius(@nu:10px){
+  -webkit-border-radius: @nu;
+  -moz-border-radius: @nu;
+  border-radius: @nu;
+}
+ body{
+  background: #F2F2F2;
+  font-size: 62.5%;
+  }
+ul{
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+#header{
+  height: @num;
+  background: #75C6BF;
+  h1{
+    .font-color;
+  }
+}
+.logo{
+  padding-left: @num*2;
+  h1 sub{
+    font-size: 0.5em;
+  }
+}
+.nav{
+  padding-right: @num;
+  li{
+    padding-top: 1.6em;
+    a{
+      .font-color;
+    }
+    .drop{
+      padding: 0 15px ;
+    }
+  }
+}
+.content .container-fluid,.carousel,.item{
+  background: #7F8B8B;
+  height: 40em;
+}
+.content .container-fluid{
+  padding: 0;
+}
+.carousel-caption{
+  bottom:15em;
+  h1{
+    font-weight: bold;
+    width: 50%;
+    .border-radius();
+  }
+  p{
+    margin: 1em auto;
+    width: 53%;
+    line-height: @num/3;
+    background: #404646;
+    .border-radius();
+  }
+}
+
+.left,.right{
+  position: absolute;
+  top: 50%;
+  color: @w-color;
+}
+.right{
+  right: 0;
+}
+.carousel-indicators{
+  bottom: -52px;
+  li,li.active,li:hover{
+    border: 0;
+    width: @num*2/3;
+    height: @num/10;
+    .border-radius(0);
+    background: #AFB7B8;
+    margin: 0;
+  }
+  li.active,li:hover{
+    background: @red-color;
+  }
+}
+.services{
+  overflow: auto;
+  padding: 0.7em @num/3;
+  margin: 4em 0;
+  background: #EBEBEB;
+  h1{
+    color: #7F8C8C;
+  }
+  p{
+    margin-top: 1em;
+    color: #868686;
+  }
+  button{
+    margin-left: @num/3;
+    color: @w-color;
+  }
+}
+.row .col-md-3{
+  text-align: center;
+  padding: 0;
+}
+.box{
+  background: @w-color;
+  height: 20em;
+  padding: 1em;
+  background-clip: content-box;
+  i{
+    font-size: 8.6em;
+    color: @red-color;
+    margin-top: 1em;
+  }
+  p{
+    padding-top: 0.5em;
+    font-weight: bold;
+  }
+  span{
+    padding: 0 0.6em;
+  }
+  button{
+    padding: 0.3em 3em;
+    .align-center;
+    color: @w-color;
+    bottom:0;
+  }
+}
+.why{
+  color: @red-color;
+}
+.why +span{
+  display: block;
+}
+.images{
+  .align-center;
+  bottom: -10em;
+  .wrap{
+    height: 350px;
+    background: #B0B8B9;
+    position: relative;
+    .border-radius();
+    margin-top: 50px;
+    .your-img{
+      width: 100%;
+      position: absolute;bottom: 0;
+      .border-radius();
+      height: 85%;
+      background: #62B9B0;
+      font-size: 30px;
+      color: @w-color;
+      border: 5px solid #B0B8B9;
+      line-height: 300px;
+    }
+    .your-img-active{
+      line-height: 375px;
+      background: #7F8C8C;
+    }
+  }
+}
+
+
+.col-md-4{
+  padding: 0;
+  .wrap{
+    margin: 0;
+    height:450px ;
+    p {
+      i{
+        margin: 1em 0.5em;
+        display: inline-block;
+        .border-radius(50%);
+        background: @w-color;
+        width: 20px;height: 20px;
+      }
+      i.pull-right{
+        margin-right: @num/3;
+        height: 12px;
+      }
+    }
+
+  }
+}
+
+
+
+
+
+
+.fa-arrow-right{
+  color:@red-color;
+}
+.choose li{
+  text-align: left;
+  line-height:@num/3;
+}
+.content .move-box{
+  background:#EBEBEB;margin-top: @num+1;height: 600px;position: relative;
+}
+.move-container{
+  margin-top: 14em;
+}
+.txt{
+  background: @w-color;
+  padding:7px;
+}
+.bg{
+  position: relative;
+  width: 120px;height: 58px;
+  display: inline-block;
+  background: url("/training/public/images/bootstrap/boot.png") no-repeat;
+}
+.bg::after{
+  content: '50';
+  font-weight: bold;
+  font-size: 20px;
+  left: 50px;
+  top: 25px;
+  position: absolute;
+}
+.bg2{
+  .bg-position();
+
+}
+.bg2::after{
+  content: '70';
+}
+.bg3{
+  .bg-position(@nu:-240px);
+}
+.bg3::after{
+  content: '80';
+}
+.bg4{
+  .bg-position(@nu:-361px)
+}
+.bg4::after{
+  content: '100';
+}
+.jquery{
+  margin-bottom: 20px;
+  line-height:225px;
+  height: 165px;
+  background: @w-color;
+  background-clip: content-box;
+}
+.bg5{
+  height: 30px;
+  background:  url("/training/public/images/bootstrap/boot.png") 0 -72px no-repeat;
+}
+.bg5::after{
+  content: '';
+}
+.progress{
+  margin-bottom: 0;
+  margin-top:12px;
+}
+footer{
+  margin-top: 80px;
+  color: @w-color;
+  background: #75C6BF;
+  .bottom{
+    clear: both;
+    padding: 0;
+    background: #6AB3AC;
+    height: 60px;
+    line-height: 60px;
+    p{
+      margin: 0;
+      i{
+        padding: 0 0.5em;
+      }
+    }
+    .pull-left{
+      padding-left: 20em;
+    }
+    .pull-right{
+      padding-right: 15em;
+    }
+  }
+}
+.links h2,.update{
+  color:#3B6360 ;
+}
+.links,.links ul li a{
+  color: @w-color;
+}
+
+@media all and (max-width: 1002px) {
+  .hides,.nav,.row-hide,.images,.jquery{
+    display: none;
+  }
+  .logo{
+    padding-left: 0;
+  }
+  .choose li{
+    padding-left: 1em;
+  }
+  .content .move-box{
+    height: 200px;
+  }
+  .move-container{
+    margin-top: 4em;
+  }
+  .navbar-toggle{
+    display: block;
+    border: 1px solid gainsboro;
+    .icon-bar{
+      background:  @w-color;
+    }
+  }
+  .bottom p{
+    padding: 0!important;
+  }
+  .fa-5x{
+    font-size: 3em;
+  }
+
+}
+

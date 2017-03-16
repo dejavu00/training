@@ -1,0 +1,28 @@
+*
+  margin: 0 auto
+$width:100%
+@mixin transform($nu:-50%)
+  -webkit-transform: translate($nu,$nu)
+  -ms-transform: translate($nu,$nu)
+  transform: translate($nu,$nu)
+.container-fluid
+  width: $width
+  position: absolute
+  left: $width/2
+  top: $width/2
+  @include transform()
+  form
+    margin-top: 70px
+    .form-group
+      label
+        width: $width
+        position: relative
+        .form-control
+          height: 54px
+          text-indent: 3em
+        i
+          position: absolute
+          top: 24%
+          left: 2%
+
+

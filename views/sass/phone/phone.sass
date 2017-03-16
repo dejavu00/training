@@ -1,0 +1,78 @@
+*
+  margin: 0
+  padding: 0
+body
+  font-size: 62.5%
+header
+  height: 5vh
+  background: #000
+$primary: #fff
+$bold: 400
+$width: 100vw
+h1,span,a
+  color: $primary
+a
+  text-decoration: none
+.flex
+  display: -webkit-flex
+  display: flex
+  justify-content: space-around
+  align-items: center
+.options
+  height: 10vh
+  background: #50C3D4
+  @extend .flex
+  h1
+    span
+      font-weight: $bold
+      i
+        font-weight: $bold
+section
+  width: $width
+  height: 75vh
+  background:
+    image: url("/training/public/images/phone/bg.jpg")
+    repeat: no-repeat
+    size: auto 100%
+  .introduce
+    text-align: center
+    @extend .flex
+    flex-direction: column
+    width: 100vw
+    height: 20vh
+    background: rgba(0, 0, 0, 0.5)
+    position: absolute
+    bottom: 10vh
+    h1
+      margin-top: 10px
+      font-size: 1.5rem
+      font-weight: 400
+    .mes
+      width: 70vw
+      height: 10vh
+      margin: 0 auto
+      @extend .flex
+      i
+        color: #53B0BD
+footer
+  height: 10vh
+  background: #EAE1DD
+  @extend .flex
+  .icon-a
+    color: #7A7F83
+    &.active,&:hover
+      color: #4BC1D2
+@media all and (orientation : landscape)
+  section
+    background:
+      size: 100% 100%
+    .introduce
+      height: 25vh
+      h1
+        margin-top: 0
+
+//@media all and (orientation : portrait)
+//  section
+//    background:
+//      size: 100% 100%
+//
