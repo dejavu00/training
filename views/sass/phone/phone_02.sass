@@ -1,0 +1,175 @@
+*
+  margin: 0
+  padding: 0
+body
+  font-size: 62.5%
+
+$primary: #fff
+$bold: 400
+$width: 100vw
+h1,span,a
+  color: $primary
+a
+  text-decoration: none
+.flex
+  display: -webkit-flex
+  display: flex
+  justify-content: space-around
+  align-items: center
+header
+  @extend .flex
+  height: 5vh
+  color: #7A7F83
+  span
+    color: #7A7F83
+  .signal
+    @extend .flex
+    justify-content: flex-start
+    flex-grow: 5
+    i
+      margin: 0 3vw
+  .current-date
+    flex-grow: 2
+  .battery
+    @extend .flex
+    justify-content: flex-end
+    flex-grow: 4
+    i
+      margin: 0 3vw
+.options
+  height: 10vh
+  background: #50C3D4
+  @extend .flex
+  h1
+    span
+      font-weight: $bold
+      i
+        font-weight: $bold
+section
+  height: 75vh
+  background:
+    image: url("/training/public/images/phone/bg.jpg")
+    repeat: no-repeat
+    size: auto 100%
+  .introduce
+    text-align: center
+    @extend .flex
+    flex-direction: column
+    width: 100vw
+    height: 20vh
+    background: rgba(0, 0, 0, 0.5)
+    position: absolute
+    bottom: 10vh
+    h1
+      margin-top: 10px
+      font-size: 1.5rem
+      font-weight: 400
+    .mes
+      width: 70vw
+      height: 10vh
+      margin: 0 auto
+      @extend .flex
+      i
+        color: #53B0BD
+footer
+  height: 10vh
+  background: #EAE1DD
+  @extend .flex
+  .icon-a
+    color: #7A7F83
+    &.active,&:hover
+      color: #4BC1D2
+
+.container
+  width: 100vw
+  overflow: hidden
+  height: 100vh
+  position: relative
+  #interface
+    left: 83vw
+    width: 100%
+    position: absolute
+  #menu
+    background: #F9FCFD
+    z-index: 2
+    position: absolute
+    width: 85vw
+    height: 99vh
+    left: 0
+    border: 1px solid gainsboro
+    label
+      overflow: hidden
+      @extend .flex
+      padding-left: 10vw
+      justify-content: flex-start
+      height: 10vh
+      background: $primary
+      #search
+        text-indent: 2vw
+        font-size: 1.2rem
+        border: 0
+    #user
+      height: 33vh
+      @extend .flex
+      .user-pic
+        padding-left: 2vw
+      .user-mes
+        @extend .flex
+        flex-direction: column
+        align-items: center
+        font-size: 1.5rem
+        p
+          padding: 1vw 0
+        span
+          font-size: 1rem
+          color: #53B0BD
+        .star
+          @extend .flex
+          font-size: 0.7rem
+          font-weight: 400
+          b
+            padding-right: 1vw
+            font-weight: bold
+
+    .user_control
+      @extend .flex
+      align-items: flex-start
+      flex-direction: column
+      height: 54vh
+      li
+        width: 100%
+        .list-group-item
+          @extend .flex
+          justify-content: space-between
+          color: #53B0BD
+          i
+            padding: 0 2vh
+          p
+            padding: 0 2vh
+
+            span
+              font-size: 2em
+              color: #7A7F83
+
+
+
+
+
+
+
+
+
+
+
+@media all and (orientation : landscape)
+  .options
+    height: 13vh
+  section
+    height: 72vh
+    background:
+      size: 100% 100%
+    .introduce
+      height: 25vh
+      h1
+        margin-top: 0
+

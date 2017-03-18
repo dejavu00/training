@@ -1,0 +1,65 @@
+@import "phone_01.sass"
+@mixin border-radius($lt:0,$rt:0,$rb:0,$lb:0)
+  -webkit-border-radius: $lt $rt $rb $lb
+  -moz-border-radius: $lt $rt $rb $lb
+  border-radius: $lt $rt $rb $lb
+$blue: #51C4D4
+.options
+  height: 15vh
+  flex-direction: column
+  background: #fff
+  h1
+    font-size: 1.4rem
+    color: #606366
+  #tab
+    @extend .flex
+    justify-content: flex-start
+    margin: 3vh 0
+    a
+      text-align: center
+      display: inline-block
+      width: 30vw
+      height: 5vh
+      line-height: 5vh
+      font-size: 1.2rem
+      color: $blue
+      border: 1px solid $blue
+
+    a.active,a:hover
+      color: #fff
+      background: $blue
+    a:first-child
+      @include border-radius($lt: 10px,$lb: 10px)
+    a:last-child
+
+      @include border-radius($rt: 10px,$rb: 10px)
+section
+  height: auto
+  background: #F0EDEB
+  @extend .flex
+  align-items: flex-start
+  i,.name
+    padding: 1vh
+    color: #CCD0D4
+  span
+    padding: 1vh
+    color: $blue
+  .main-right,.main_left
+    .item
+
+      padding-bottom: 1vw
+      .item-txt
+        background: #fff
+  .main_left
+    .item
+      padding: 1vw
+  img
+    width: 100%
+
+footer
+  background: #F0EDEB
+@media all and (orientation : landscape)
+  .options
+    height: 23vh
+
+

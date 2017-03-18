@@ -1,0 +1,351 @@
+*{
+  margin: 0 ;padding: 0;
+}
+a{
+  text-decoration: none;
+  color: @font-color;
+}
+li{
+  list-style: none;
+}
+img{
+  width: 100%;height: 100%;
+}
+body{
+  font-size: 62.5%;
+}
+.text-center{
+  text-align: center;
+}
+
+@white:#fff;
+@font-color:#333;
+@blue:#67ABF5;
+.bg-position(@x:0,@y:0) {
+  background-position: @x @y ;
+}
+.align-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform:translate(-50%,-50%) ;
+    -moz-transform: translate(-50%,-50%) ;
+    -ms-transform: translate(-50%,-50%) ;
+    transform: translate(-50%,-50%) ;
+  }
+  .border-radius(@nu:10px){
+    -webkit-border-radius: @nu;
+    -moz-border-radius: @nu;
+    border-radius: @nu;
+  }
+  .flex{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header{
+    height:136px ;
+    font-size: 1.6em;
+    .flex;
+    #logo{
+      width: 20%;
+      height:100%;
+      .flex;
+      a{
+        display: block;
+        width: 100px;
+        text-align: center;
+        img{
+          width: 53px;
+        }
+        b{
+          display: inline-block;
+          color: @blue;
+        }
+      }
+    }
+    nav{
+      width: 60%;
+      ul{
+        .flex;
+        li{
+          a{
+            font-weight: bold;
+          }
+          &:hover a,&.active a{
+            color: @blue;
+          }
+        }
+      }
+    }
+  }
+  .banner{
+    overflow: hidden;
+    height: 50em;
+    .box{
+      position: relative;
+      .introduce{
+        .align-center;
+        top: -30%;
+        width: 58%;
+        height: 295px;
+
+        .flex;
+        .super-system{
+          font-size: 1.7em;
+          line-height: 1.8em;
+          color: @white;
+          span{
+            color: #5CB74C;
+
+          };
+          p.p-title{
+            margin: 1em 0;
+            border-top:1px solid @white ;
+            border-bottom:1px solid @white ;
+          }
+        }
+      }
+    }
+  }
+  section {
+    article {
+      width: 90%;
+      margin: 100px auto;
+      h1 {
+        font-size: 2.5em;
+        width: 70%;
+        .border-radius(30px);
+        background: #D2F9FD;
+        margin: auto;
+        padding: 1em 0;
+      }
+      .item {
+        margin: 5em 0;
+        .flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 11em;
+        .phone{
+          width: 35%;
+
+        }
+        .phone-txt {
+          width: 45%;
+          font-size: 2em;
+          .flex;
+          flex-direction: column;
+          p {
+            width: 100%;
+            color: red;
+            margin: 1em 0;
+          }
+          .icons {
+            width: 100%;
+            .flex;
+            flex-direction: column;
+            .row{
+              width: 100%;
+              .flex;
+              justify-content: space-between;
+              a{
+                display: block;
+                width: 98px;
+                height: 98px;
+                background: url("../public/image/首页/bg.png") no-repeat;
+                margin: 1em 0;
+              }
+            }
+            .row:first-child {
+              a:first-child {
+                .bg-position();
+              }
+              a:nth-child(2) {
+                .bg-position(-105px);
+              }
+              a:nth-child(3) {
+                .bg-position(-218px);
+              }
+            }
+            .row:nth-child(2) {
+              a:first-child {
+                .bg-position(-327px);
+              }
+              a:nth-child(2) {
+                .bg-position(-435px);
+              }
+              a:nth-child(3) {
+                .bg-position(-550px);
+              }
+
+            }
+
+          }
+
+        }
+      }
+      .item2{
+        font-size: 1.8em;
+        .flex;
+        flex-wrap: wrap;
+        .core{
+          width:50% ;
+          .flex;
+          flex-direction: column;
+          margin: 1em 0;
+          .core-icon{
+            width: 155px;
+            height: 155px;
+            background: url("../public/image/首页/bg.png") no-repeat;
+          }
+          h2{
+            font-weight: 400;
+            margin: 1em 0;
+          }
+          p{
+            line-height: 1.6em;
+          }
+        }
+        .core:first-child .core-icon{
+          .bg-position(0,-121px);
+        }
+        .core:nth-child(2) .core-icon{
+          .bg-position(-161px,-121px);
+        }
+        .core:nth-child(3) .core-icon{
+          .bg-position(-327px,-121px);
+        }
+        .core:nth-child(4) .core-icon{
+          .bg-position(-500px,-121px);
+        }
+      }
+      .item3{
+        font-size: 1.4em;
+        .flex;
+        flex-wrap: wrap;
+        .type{
+          position: relative;
+          width: 35%;
+          margin: 1em 0;
+          .word{
+            overflow: hidden;
+            box-sizing: border-box;
+            line-height: 1.6em;
+            margin:1em 1em 2em;
+            padding: 0.5em;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 32%;
+          }
+        }
+      }
+    }
+  }
+footer{
+  .procedure{
+    padding-bottom: 2em;
+    font-size: 2.5em;
+    .flex;
+    .circle{
+      line-height: 200px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #FFD554;
+      .border-radius(50%);
+    }
+    span{
+      font-size: 2.5em;
+    }
+  }
+  .bottom{
+    background: #2A2A2A;
+    height: 244px;
+    position: relative;
+    .flex;
+    address{
+      font-size: 12px;
+      font-style: normal;;
+      line-height: 3em;
+      color: @white;
+      text-align: left;
+      b{
+
+        padding-right: 2em;
+      }
+
+    }
+    @-moz-document url-prefix(){
+      address{
+        font-size: 14px;
+      }
+    }
+    a{
+      color: @white;
+      span{
+        font-size: 1.7em;
+        padding: 1em 0;
+        display: block;
+      }
+      img{
+        width: 153px;height: 151px;
+      }
+    }
+  }
+}
+@media all and (max-width: 1007px){
+  section article .item2 .core{
+    width: 100%;
+  }
+  section article .item{
+    padding: 0;
+  }
+  .banner{
+    height: 39em;
+  }
+  .banner >img{
+    min-height: 450px;
+  }
+  section article{
+    margin-top: 1em;
+  }
+}
+@media all and (max-width:781px){
+  .banner .box .introduce{
+    flex-wrap: wrap;
+    width: 320px;
+    .service-pic{
+      display: none;
+    }
+    .super-system{
+      width: 60%;
+      font-size: 1.3em;
+    }
+  }
+  .banner{
+    height: 20em;
+  }
+  section article .item {
+    .phone{
+      width: 50%;
+    }
+    .phone-txt{
+      width: 90%;
+    }
+    &{
+      justify-content: space-around;
+    }
+  }
+  section article .item3 .type{
+    width: 90%;
+  }
+  footer .bottom{
+
+    flex-wrap: wrap;
+    height: auto;
+    address{
+      text-align: center;
+    }
+  }
+}
